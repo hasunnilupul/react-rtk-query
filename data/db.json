@@ -1,0 +1,8 @@
+{
+  "contacts": [
+    { "id": "1", "name": "John Doe", "email": "johndoe@gmail.com" },
+    { "id": "2", "name": "Jane Doe", "email": "janedoe@gmail.com" },
+    { "id": "3", "name": "Mike Baning", "email": "mbaning@gmail.com" },
+    { "id": "4", "name": "Killean Rose", "email": "krose@yahoo.com" }
+  ]
+}
