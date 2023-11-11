@@ -1,8 +1,34 @@
 {
   "contacts": [
-    { "id": "1", "name": "John Doe", "email": "johndoe@gmail.com" },
-    { "id": "2", "name": "Jane Doe", "email": "janedoe@gmail.com" },
-    { "id": "3", "name": "Mike Baning", "email": "mbaning@gmail.com" },
-    { "id": "4", "name": "Killean Rose", "email": "krose@yahoo.com" }
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "Jane Doe",
+      "email": "janedoe@gmail.com"
+    },
+    {
+      "name": "Mike Baning",
+      "email": "mikbaning@gmail.com",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "name": "Killean Rose",
+      "email": "krose@yahoo.com"
+    },
+    {
+      "name": "Hasun Nilupul",
+      "email": "hasunnilupul@gmail.com",
+      "id": "xIG6v83"
+    },
+    {
+      "name": "Kleos George",
+      "email": "kgeorge@yahoo.com",
+      "id": "4xUdc7O"
+    }
   ]
 }
