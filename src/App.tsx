@@ -56,7 +56,7 @@ function App() {
 
         {/* List Contacts */}
         {isSuccess && (
-          <ul role="list" className="divide-y sm:divide-none divide-gray-200 sm:grid sm:grid-cols-3 md:grid-cols-4 sm:gap-x-5">
+          <ul className="divide-y sm:divide-none divide-gray-200 sm:grid sm:grid-cols-3 md:grid-cols-4 sm:gap-x-5">
             {data?.map((contact) => (
               <li key={contact.id} className="flex min-w-0 gap-x-4 py-5">
                 <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={`https://source.unsplash.com/random/${contact.id}?person,avatar`} alt="" />
