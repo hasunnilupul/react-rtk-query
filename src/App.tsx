@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 
-import { useContactsQuery, useDeleteContactMutation } from "./services/contactFirstore";
+import {
+  useContactsQuery,
+  useDeleteContactMutation,
+} from "./services/contactFirstore";
 import NavBar from "./layout/NavBar";
 import ContactDetail from "./components/contactDetail";
 import { Contact } from "./models/contact.model";
 import UpdateContact from "./components/updateContact";
 
 function App() {
-  const { data, error, isLoading, isFetching, isSuccess } = useContactsQuery();
+  const { data, isError, isLoading, isFetching, isSuccess } =
+    useContactsQuery();
   const [showEditModal, setShowEditModal] = useState<boolean>(false);
   const [editingContact, setEditingContact] = useState<Contact>({
     id: "",
@@ -39,6 +43,56 @@ function App() {
     <>
       <NavBar />
       <main className="relative flex-grow flex flex-col justify-between items-center">
+        {/* Contacts loading state */}
+        {isLoading && (
+          <svg
+            className="mx-auto my-auto animate-spin h-16 w-16 text-amber-600"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+            ></circle>
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
+          </svg>
+        )}
+
+        {/* Contacts fetching state */}
+        {isFetching && <h2>Contacts fetching</h2>}
+
+        {/* display errors */}
+        {isError && (
+          <div className="mx-auto my-auto flex flex-col items-center text-red-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-16 h-16"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+              />
+            </svg>
+            <h4 className="text-2xl font-medium text-red-400 mt-5">
+              Something went wrong
+            </h4>
+          </div>
+        )}
+
         {/* List Contacts */}
         {isSuccess && (
           <ul className="divide-y sm:divide-none divide-gray-200 sm:grid sm:grid-cols-3 md:grid-cols-4 sm:gap-x-5">
