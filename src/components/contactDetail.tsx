@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContactQuery } from '../services/contactApi';
+import { useContactQuery } from '../services/contactFirstore';
 
 type ContactDetailProps = {
     id: string;

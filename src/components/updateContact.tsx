@@ -1,7 +1,7 @@
 import React, { useState, Fragment, useRef, ChangeEvent, FormEvent, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 
-import { useUpdateContactMutation } from '../services/contactApi';
+import { useUpdateContactMutation } from '../services/contactFirstore';
 import { Contact } from '../models/contact.model';
 
 type UpdateContactProps = {
