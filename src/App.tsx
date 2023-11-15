@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { useContactsQuery, useDeleteContactMutation } from './services/contactApi';
-import NavBar from './layout/navBar';
+import NavBar from './layout/NavBar';
 import ContactDetail from './components/contactDetail';
 import { Contact } from './models/contact.model';
 import UpdateContact from './components/updateContact';
